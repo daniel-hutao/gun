@@ -1,0 +1,113 @@
+{
+	"ImportPath": "github.com/daniel-hutao/gun",
+	"GoVersion": "go1.12",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/360EntSecGroup-Skylarn/excelize",
+			"Comment": "v2.1.0-15-g6ab5b99",
+			"Rev": "6ab5b991e47e7fa9e9370da93404adaf04cba34a"
+		},
+		{
+			"ImportPath": "github.com/mohae/deepcopy",
+			"Rev": "c48cc78d482608239f6c4c92a4abd87eb8761c90"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html",
+			"Rev": "04a2e542c03f1d053ab3e4d6e5abcd4b66e2be8e"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html/atom",
+			"Rev": "04a2e542c03f1d053ab3e4d6e5abcd4b66e2be8e"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html/charset",
+			"Rev": "04a2e542c03f1d053ab3e4d6e5abcd4b66e2be8e"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/charmap",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/htmlindex",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/internal",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/internal/identifier",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/japanese",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/korean",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/simplifiedchinese",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/traditionalchinese",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding/unicode",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal/language",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal/language/compact",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal/tag",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal/utf8internal",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/language",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/runes",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		},
+		{
+			"ImportPath": "golang.org/x/text/transform",
+			"Comment": "v0.3.0-67-g6f44c5a",
+			"Rev": "6f44c5a2ea40ee3593d98cdcc905cc1fdaa660e2"
+		}
+	]
+}
