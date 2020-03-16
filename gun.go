@@ -1,11 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"strconv"
+	"strings"
+
+	"github.com/360EntSecGroup-Skylar/excelize"
 
 	"github.com/daniel-hutao/fund/fund"
+	"github.com/daniel-hutao/gun/excel"
 )
 
 // 需求1：
@@ -14,19 +17,48 @@ import (
 // 并且将剩下每一格按照无交易的默认值(公式)填充好。
 
 func main() {
-	//e := NewExcel("Book1.xlsx")
-	//intStr, err := e.File.GetCellValue("Sheet1", "A1")
-	//if err != nil {
-	//	log.Fatal(err)
-	//}
-	//fmt.Println(intStr)
-	//fmt.Println(DateToInt("2020-03-15"))
-	//fmt.Println(IntToDate(43905))
+	var date = "2020-03-13"
 
-	jz, err1 := fund.GetRain().GetOneFundJZ("001717", "2020-03-13")
-	if err1 != nil {
-		log.Fatal(err1)
+	e := excel.NewExcel("fund.xlsx")
+	sheetMap := e.File.GetSheetMap()
+
+	for _, sheetName := range sheetMap {
+		// get code from the sheet
+		title, err := e.File.GetCellValue(sheetName, "A1")
+		if err != nil {
+			log.Fatal(err)
+		}
+		fundCode := strings.Split(title, "-")[1]
+
+		// get jz from server
+		jz, err := fund.GetRain().GetOneFundJZ(fundCode, date)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		// get the coordinate with date
+		cors, err := e.File.SearchSheet(sheetName, strconv.Itoa(excel.DateToInt(date)))
+		if err != nil {
+			log.Fatal(err)
+		}
+		if len(cors) != 1 {
+			log.Fatal("cores != 1")
+		}
+		cor := cors[0]
+		c, r, err := excelize.CellNameToCoordinates(cor)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		// set value
+		cor1, err := excelize.CoordinatesToCellName(c+1, r)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		e.File.SetCellFloat(sheetName, cor1, jz, 4, 64)
+
 	}
-	fmt.Println(strconv.FormatFloat(jz, 'f', 4, 64))
-	//fmt.Println(time.UTC)
+
+	e.File.Save()
 }
