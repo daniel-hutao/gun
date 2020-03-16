@@ -1,9 +1,10 @@
 package excel
 
 import (
-	"github.com/360EntSecGroup-Skylarn/excelize"
 	"log"
 	"os"
+
+	"github.com/360EntSecGroup-Skylarn/excelize"
 )
 
 type Excel struct {

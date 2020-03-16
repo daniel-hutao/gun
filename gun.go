@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/daniel-hutao/fund/fund"
-	. "github.com/daniel-hutao/gun/excel"
 	"log"
 	"strconv"
+
+	"github.com/daniel-hutao/fund/fund"
 )
 
 // 需求1：
@@ -14,16 +14,19 @@ import (
 // 并且将剩下每一格按照无交易的默认值(公式)填充好。
 
 func main() {
-	e := NewExcel("Book1.xlsx")
-	intStr, err := e.File.GetCellValue("Sheet1", "A1")
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println(intStr)
-	fmt.Println(DateToInt("2020-03-15"))
-	fmt.Println(IntToDate(43905))
+	//e := NewExcel("Book1.xlsx")
+	//intStr, err := e.File.GetCellValue("Sheet1", "A1")
+	//if err != nil {
+	//	log.Fatal(err)
+	//}
+	//fmt.Println(intStr)
+	//fmt.Println(DateToInt("2020-03-15"))
+	//fmt.Println(IntToDate(43905))
 
-	jz := fund.GetRain().GetOneFundJZ("001717", "2020-03-13")
-	fmt.Println(strconv.FormatFloat(jz, 64))
+	jz, err1 := fund.GetRain().GetOneFundJZ("001717", "2020-03-13")
+	if err1 != nil {
+		log.Fatal(err1)
+	}
+	fmt.Println(strconv.FormatFloat(jz, 'f', 4, 64))
 	//fmt.Println(time.UTC)
 }
