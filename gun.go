@@ -7,7 +7,7 @@ import (
 
 	"github.com/360EntSecGroup-Skylar/excelize"
 
-	"github.com/daniel-hutao/fund/fund"
+	fundx "github.com/daniel-hutao/fund/fund"
 	"github.com/daniel-hutao/gun/excel"
 )
 
@@ -31,7 +31,7 @@ func main() {
 		fundCode := strings.Split(title, "-")[1]
 
 		// get jz from server
-		jz, err := fund.GetRain().GetOneFundJZ(fundCode, date)
+		jz, err := fundx.GetRain().GetOneFundJZ(fundCode, date)
 		if err != nil {
 			log.Fatal(err)
 		}
